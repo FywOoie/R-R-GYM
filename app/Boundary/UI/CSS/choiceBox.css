@@ -1,0 +1,18 @@
+/*This is css file for choice boxes*/
+.choose{
+    -fx-border-width: 2px;
+    -fx-background-radius: 20px;
+    -fx-border-color: #13c6e4;
+    -fx-border-radius: 20px;
+    -fx-background-color: #ffffff;
+    -fx-mark-color: green;
+    -fx-font-size: 12px;
+}
+.choice-box .context-menu{
+    -fx-font-size: 12px;
+    -fx-background-radius: 15px;
+}
+.choice-box .menu-item:focused{
+    -fx-background-color: #13c6e4 ;
+    -fx-background-radius: 15px;
+}

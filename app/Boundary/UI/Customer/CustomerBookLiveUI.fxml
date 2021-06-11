@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Customer.CustomerBookLiveUIController">
+   <children>
+      <DatePicker fx:id="calendar" layoutX="495.0" layoutY="68.0" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: #ff7043;" />
+      <TableView fx:id="liveTable" layoutX="140.0" layoutY="142.0" prefHeight="470.0" prefWidth="920.0" styleClass="table-row" stylesheets="@../CSS/table.css">
+        <columns>
+          <TableColumn fx:id="liveIDColumn" prefWidth="140.8000030517578" text="Live ID" />
+          <TableColumn fx:id="liveContentColumn" prefWidth="152.79998779296875" text="Live Content" />
+            <TableColumn fx:id="coachColumn" prefWidth="183.199951171875" text="Coach" />
+            <TableColumn fx:id="timeColumn" prefWidth="245.5999755859375" text="Time" />
+            <TableColumn fx:id="selectedColumn" prefWidth="196.0" text="Selected" />
+        </columns>
+      </TableView>
+      <Button layoutX="921.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#searchLive" prefHeight="34.0" prefWidth="108.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Search" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="190.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="34.0" prefWidth="108.0" styleClass="tab" stylesheets="@../CSS/button.css" text="back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="invalidLabel" layoutX="495.0" layoutY="110.0" prefHeight="24.0" prefWidth="210.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

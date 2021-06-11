@@ -1,0 +1,13 @@
+/*This is css file for input fields*/
+.number{
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-padding:5px 5px 5px 32px;
+}
+.number:hover{
+    -fx-effect: dropshadow(three-pass-box, #72b9da, 10.0,0, 0, 0);
+}
+.inputInfo{
+    -fx-background-radius: 15px;
+    -fx-padding: 0 8px 0 8px;
+}

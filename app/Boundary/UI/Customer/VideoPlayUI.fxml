@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Control.Customer.CustomerVideoPlayControl">
+   <children>
+      <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;">
+         <children>
+            <Label fx:id="videoName" layoutX="59.0" layoutY="70.0" text="Video Name" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="1139.0" layoutY="123.0" text="LOG OUT" textFill="WHITE">
+               <font>
+                  <Font name="Centaur" size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="1146.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#userLogOut" prefHeight="40.0" prefWidth="40.0" styleClass="logout" stylesheets="@../CSS/button.css" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="backLabel" layoutX="50.0" layoutY="32.0" onMouseClicked="#backLabelClick" style="-fx-background-color: #f4511e;" styleClass="tab" stylesheets="@../CSS/button.css" text="&lt;&lt;BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <BorderPane layoutX="20.0" layoutY="170.0" prefHeight="420.0" prefWidth="820.0" style="-fx-background-color: black;">
+         <center>
+            <MediaView fx:id="videoShow" fitHeight="400.0" fitWidth="800.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Button fx:id="playButton" layoutX="33.0" layoutY="617.0" mnemonicParsing="false" onMouseClicked="#playClick" prefHeight="40.0" prefWidth="40.0" styleClass="play" stylesheets="@../CSS/button.css" textFill="WHITE" />
+      <Slider fx:id="timeSlide" layoutX="20.0" layoutY="596.0" prefHeight="20.0" prefWidth="820.0" />
+      <Label fx:id="currentTime" layoutX="664.0" layoutY="600.0" textAlignment="RIGHT">
+         <font>
+            <Font name="Ink Free" size="27.0" />
+         </font></Label>
+      <Button fx:id="like" layoutX="1135.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#addFavoList" prefHeight="48.0" prefWidth="48.0" styleClass="like" stylesheets="@../CSS/button.css" textFill="WHITE" />
+      <Button fx:id="cancel" layoutX="1135.0" layoutY="155.0" mnemonicParsing="false" onMouseClicked="#removeFavoList" prefHeight="48.0" prefWidth="48.0" styleClass="dislike" stylesheets="@../CSS/button.css" textFill="WHITE" />
+      <Button fx:id="pauseButton" layoutX="33.0" layoutY="617.0" mnemonicParsing="false" onMouseClicked="#pauseClick" prefHeight="40.0" prefWidth="40.0" styleClass="pause" stylesheets="@../CSS/button.css" textFill="WHITE" visible="false" />
+      <Label layoutX="872.0" layoutY="279.0" text="Video Name :">
+         <font>
+            <Font name="Harlow Solid Italic" size="25.0" />
+         </font></Label>
+      <Label fx:id="nameLabel" layoutX="1032.0" layoutY="286.0" prefHeight="29.0" prefWidth="151.0" text="Some">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font></Label>
+      <Label layoutX="892.0" layoutY="346.0" text="Category : ">
+         <font>
+            <Font name="Harlow Solid Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="874.0" layoutY="416.0" text="Like Number : ">
+         <font>
+            <Font name="Harlow Solid Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="886.0" layoutY="484.0" text="Create Date :">
+         <font>
+            <Font name="Harlow Solid Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="849.0" layoutY="189.0" text="Video Information">
+         <font>
+            <Font name="Harlow Solid Italic" size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="catLabel" layoutX="1032.0" layoutY="357.0" prefHeight="29.0" prefWidth="151.0" text="Thing">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="likeLabel" layoutX="1032.0" layoutY="423.0" prefHeight="29.0" prefWidth="151.0" text="Went">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="1032.0" layoutY="491.0" prefHeight="29.0" prefWidth="151.0" text="Wrong">
+         <font>
+            <Font name="Agency FB" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

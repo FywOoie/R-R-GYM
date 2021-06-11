@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Administrator.AdminCustomerUIController">
+    <children>
+        <AnchorPane fx:id="CoachListController" prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;">
+            <children>
+                <Label layoutX="66.0" layoutY="33.0" prefHeight="80.0" prefWidth="218.0" text="Customer" textFill="WHITE">
+                    <font>
+                        <Font name="Gabriola" size="65.0" />
+                    </font>
+                </Label>
+              <Button layoutX="300.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToVideoList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Video" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+              <Button layoutX="450.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToCoachList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Coach" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="600.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToBillList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Bill" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+        </AnchorPane>
+      <Label fx:id="wrongSearchLabel" layoutX="53.0" layoutY="228.0" prefHeight="20.0" prefWidth="230.0" textFill="RED" />
+      <TextField fx:id="customerSearchInput" layoutX="190.0" layoutY="173.0" prefHeight="48.0" prefWidth="150.0" styleClass="number" stylesheets="@../CSS/inputnumber.css">
+         <font>
+            <Font name="Arial" size="29.0" />
+         </font>
+      </TextField>
+      <Label layoutX="84.0" layoutY="175.0" text="Name">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerTable" layoutX="53.0" layoutY="260.0" prefHeight="382.0" prefWidth="555.0" stylesheets="@../CSS/table.css">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="97.0" text="Name" />
+          <TableColumn fx:id="uidCol" prefWidth="57.0" text="UID" />
+            <TableColumn fx:id="pwdCol" prefWidth="137.0" text="PWD" />
+            <TableColumn fx:id="balanceCol" prefWidth="99.0" text="Blance" />
+            <TableColumn fx:id="memCol" prefWidth="163.0" text="Membership" />
+        </columns>
+      </TableView>
+      <Button fx:id="showCustomer" alignment="CENTER" layoutX="360.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#customerShow" prefHeight="60.0" prefWidth="60.0" styleClass="search" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="1136.0" layoutY="107.0" text="LOG OUT" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="adminName" layoutX="1076.0" layoutY="22.0" prefHeight="30.0" prefWidth="120.0" text="Admin Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="1144.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#adminLogOut" prefHeight="40.0" prefWidth="40.0" styleClass="logout" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="448.0" layoutY="238.0" text="0-non;1-basic;2-premier" textFill="#13c6e4" />
+      <Pane layoutX="627.0" layoutY="339.0" prefHeight="122.0" prefWidth="540.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <Text fill="#13c6e4" layoutX="123.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Customer">
+               <font>
+                  <Font name="System Italic" size="34.0" />
+               </font>
+            </Text>
+            <Label fx:id="customerDeleteLabel" layoutX="123.0" layoutY="83.0" prefHeight="30.0" prefWidth="249.0" textFill="RED" />
+            <Button fx:id="deleteCustomerButton" layoutX="451.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#deleteCustomer" prefHeight="73.0" prefWidth="72.0" styleClass="delete" stylesheets="@../CSS/button.css" textFill="#f4511e">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <TextField fx:id="deleteCustomerInput" layoutX="246.0" layoutY="42.0" prefHeight="39.0" prefWidth="179.0" promptText="e.g. 3" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Text layoutX="93.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer UID">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="627.0" layoutY="148.0" prefHeight="185.0" prefWidth="540.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <Text fill="#13c6e4" layoutX="152.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer">
+               <font>
+                  <Font name="System Italic" size="34.0" />
+               </font>
+            </Text>
+            <Label fx:id="customerAddLabel" layoutX="167.0" layoutY="145.0" prefHeight="32.0" prefWidth="361.0" textFill="RED" />
+            <TextField fx:id="customerPwdInput" layoutX="247.0" layoutY="99.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. password" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Text layoutX="124.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="customerNameInput" layoutX="247.0" layoutY="46.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. name" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Button fx:id="addCustomerButton" layoutX="453.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#addCustomer" prefHeight="73.0" prefWidth="73.0" styleClass="add" stylesheets="@../CSS/button.css" textFill="#f4511e">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Text layoutX="78.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="627.0" layoutY="467.0" prefHeight="200.0" prefWidth="540.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <Text fill="#13c6e4" layoutX="107.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Information">
+               <font>
+                  <Font name="System Italic" size="34.0" />
+               </font>
+            </Text>
+            <Label fx:id="customerChangeLabel" layoutX="155.0" layoutY="164.0" prefHeight="30.0" prefWidth="230.0" textFill="RED" />
+            <Text layoutX="107.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer UID">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="changeCustomerInput" layoutX="255.0" layoutY="63.0" prefHeight="39.0" prefWidth="179.0" promptText="e.g. 3" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <ChoiceBox fx:id="chooseChange" layoutX="96.0" layoutY="129.0" prefHeight="32.0" prefWidth="150.0" styleClass="choose" stylesheets="@../CSS/choiceBox.css" />
+            <TextField fx:id="changeCustomerInforInput" layoutX="255.0" layoutY="125.0" prefHeight="39.0" prefWidth="179.0" promptText="e.g. information" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Button fx:id="deleteCustomerButton1" layoutX="454.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#changeCustomer" prefHeight="73.0" prefWidth="72.0" styleClass="change" stylesheets="@../CSS/button.css" textFill="#f4511e">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

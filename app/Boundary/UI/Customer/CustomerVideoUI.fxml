@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Customer.CustomerVideoUIController">
+    <children>
+        <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;">
+         <children>
+            <Label layoutX="416.0" layoutY="42.0" text="Your Video List" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+        <TableView fx:id="StuTable" layoutX="250.0" layoutY="250.0" prefHeight="300.0" prefWidth="700.0" stylesheets="@../CSS/table.css">
+            <columns>
+                <TableColumn fx:id="VidCol" minWidth="0.0" prefWidth="350.0" text="Video Name" />
+                <TableColumn fx:id="CoaCol" prefWidth="350.0" text="Coach Name" />
+            </columns>
+        </TableView>
+        <Label layoutX="50.0" layoutY="32.0" onMouseClicked="#backLabelClick" style="-fx-background-color: #f4511e;" styleClass="tab" stylesheets="@../CSS/button.css" text="&lt;&lt;BACK" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+    </children>
+</AnchorPane>

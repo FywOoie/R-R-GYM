@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Control.Customer.CustomerPurchaseControl">
+    <children>
+        <Label alignment="CENTER" layoutX="109.0" layoutY="164.0" prefHeight="50.0" prefWidth="350.0" style="-fx-background-color: #ff7043;" text="Basic Membership" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="109.0" layoutY="383.0" prefHeight="50.0" prefWidth="400.0" style="-fx-background-color: #FFD700;" text="Premier Membership" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;" text="Membership Purchase" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="48.0" />
+            </font>
+        </Label>
+        <Button fx:id="premier" layoutX="1034.0" layoutY="471.0" mnemonicParsing="false" onMouseClicked="#buyPremierMem" prefHeight="83.0" prefWidth="95.0" styleClass="goToPurchase" stylesheets="@../CSS/button.css" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+      </Button>
+        <Button fx:id="basic" layoutX="1034.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#buyBasic" prefHeight="83.0" prefWidth="95.0" styleClass="goToPurchase" stylesheets="@../CSS/button.css" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+      </Button>
+        <TextArea fx:id="basicDes" cache="true" editable="false" layoutX="180.0" layoutY="231.0" prefHeight="115.0" prefWidth="582.0" style="-fx-background-color: #ff9e80;" stylesheets="@../CSS/textarea.css" text="Basic membership contains a basic workout package videos. If you purchase now, you will receive a 50% discount. In the meanwhile, you can always upgrade your membership!" wrapText="true">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+      </TextArea>
+        <TextArea fx:id="preDis" editable="false" layoutX="179.0" layoutY="452.0" prefHeight="120.0" prefWidth="574.0" style="-fx-background-color: #FFB90F;" stylesheets="@../CSS/textarea.css" text="Premier membership contains a all workout videos. If you purchase now, you will receive a 60% discount. In the meanwhile, you can have a 1 on 1 training coach teach you a few moves online!" wrapText="true">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+      </TextArea>
+        <Button alignment="CENTER" layoutX="1063.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#chargeClick" prefHeight="61.0" prefWidth="78.0" styleClass="goToCharge" stylesheets="@../CSS/button.css" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="32.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+      </Button>
+      <Label fx:id="memBuyLabel" layoutX="109.0" layoutY="595.0" prefHeight="39.0" prefWidth="1040.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="basicPrice" layoutX="854.0" layoutY="266.0" prefHeight="50.0" prefWidth="114.0" style="-fx-border-color: black;">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="prePrice" layoutX="854.0" layoutY="489.0" prefHeight="50.0" prefWidth="114.0" style="-fx-border-color: black;">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="1073.0" layoutY="105.0" text="Charge" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Goudy Old Style" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="32.0" onMouseClicked="#returnClick" style="-fx-background-color: #f4511e;" styleClass="tab" stylesheets="@../CSS/button.css" text="&lt;&lt;BACK" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

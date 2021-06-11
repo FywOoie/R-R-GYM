@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#loginEnter" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Customer.CustomerLoginUIController">
+   <children>
+           <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #F4511e;" BorderPane.alignment="CENTER" />
+           <AnchorPane layoutY="146.0" prefHeight="530.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                   <Button fx:id="registerButton" layoutX="478.0" layoutY="374.0" mnemonicParsing="false" onMouseClicked="#registerButtonClick" prefHeight="38.0" prefWidth="243.0" styleClass="tab1" stylesheets="@../CSS/button.css" text="New User" textFill="WHITE">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                       <cursor>
+                           <Cursor fx:constant="HAND" />
+                       </cursor>
+            </Button>
+                   <Button fx:id="loginButton" layoutX="478.0" layoutY="309.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="38.0" prefWidth="243.0" styleClass="tab1" stylesheets="@../CSS/button.css" text="Login" textFill="WHITE">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                       <cursor>
+                           <Cursor fx:constant="HAND" />
+                       </cursor>
+            </Button>
+                   <TextField fx:id="customerID" layoutX="550.0" layoutY="100.0" prefHeight="27.2" prefWidth="230.0" styleClass="number" stylesheets="@../CSS/inputnumber.css">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </TextField>
+                   <PasswordField fx:id="password" layoutX="550.0" layoutY="200.0" prefHeight="27.2" prefWidth="230.0" styleClass="number" stylesheets="@../CSS/inputnumber.css">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </PasswordField>
+            <Label fx:id="coachLabel" layoutX="550.0" layoutY="485.0" onMouseClicked="#coachLoginClick" onMouseEntered="#labelEnter" onMouseExited="#labelExit" prefHeight="30.0" prefWidth="100.0" text="Coach Login" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="adminLabel" layoutX="680.0" layoutY="485.0" onMouseClicked="#adminLoginClick" onMouseEntered="#labelEnter" onMouseExited="#labelExit" prefHeight="30.0" prefWidth="100.0" text="Admin Login" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="1.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="420.0" layoutY="485.0" prefHeight="30.0" prefWidth="100.0" text="User Login" textFill="#7093db">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="9.0" />
+               </padding>
+            </Label>
+            <Label fx:id="wrongPwdLabel" layoutX="550.0" layoutY="252.0" prefHeight="0.0" prefWidth="230.0" textFill="RED" />
+            <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="559.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/username.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="559.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/password.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="530.0" prefHeight="46.0" prefWidth="140.0" text="Customer Login" textFill="#f4511e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="172.0" layoutX="358.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/username1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="172.0" layoutX="369.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/password1.png" />
+               </image>
+            </ImageView>
+               </children>
+      </AnchorPane>
+      <ImageView fitHeight="211.0" fitWidth="602.0" layoutX="309.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:resource/image/RnR.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="114.0" fitWidth="91.0" layoutX="558.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:resource/image/Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

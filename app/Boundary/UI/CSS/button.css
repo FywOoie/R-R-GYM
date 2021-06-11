@@ -1,0 +1,199 @@
+/*This is css file for buttons*/
+.tab{
+    -fx-background-color: #ff7043;
+    -fx-border-radius: 10px;
+}
+.tab:hover{
+    -fx-background-color: #ff8a65;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, #757575, 10.0,0, 0, 0);
+}
+
+.tab1{
+    -fx-background-color: #ff7043;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.tab1:hover{
+    -fx-background-color: #ff8a65;
+    -fx-effect: dropshadow(three-pass-box, #757575, 10.0,0, 0, 0);
+}
+
+.search{
+    -fx-background-color: #F4F4F4;
+    -fx-background-image: url(assets/search.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 10px;
+}
+.search:hover{
+    -fx-background-color: white;
+}
+.add{
+    -fx-background-color: #F4F4F4;
+    -fx-background-image: url(assets/add.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.delete{
+    -fx-background-color: #F4F4F4;
+    -fx-background-image: url(assets/delete.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.change{
+    -fx-background-color: #F4F4F4;
+    -fx-background-image: url(assets/change.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.add:hover, .delete:hover,.change:hover{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, #757575, 10.0,0, 0, 0);
+}
+.feedback{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/feedback.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.feedback:hover{
+    -fx-effect: dropshadow(three-pass-box, #757575, 10.0,0, 0, 0);
+}
+.like{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/dislike.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.dislike{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/like.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.like:hover,.dislike:hover{
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, #757575, 10.0,0, 0, 0);
+}
+.play{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/play.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+.pause{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/pause.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+.play:hover, .pause:hover{
+    -fx-effect: dropshadow(three-pass-box, #757575, 10.0,0, 0, 0);
+}
+
+.personalInfo{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/user.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.membership{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/vip.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 25px;
+}
+.logout{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/logout.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 20px;
+}
+.mission{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/misson.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 20px;
+}
+.book{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/book.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 20px;
+}
+.live{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/live.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 20px;
+}
+.show{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/show.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 20px;
+}
+
+.goToCharge{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/charge.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 20px;
+}
+
+.goToPurchase{
+    -fx-background-color: white;
+    -fx-background-image: url(assets/purchase.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-radius: 20px;
+}
+
+.charge:hover{
+    -fx-effect: dropshadow(three-pass-box, #66e9ff, 15.0,0, 0, 0);
+}
+
+.personalInfo:hover, .membership:hover, .logout:hover,
+.mission:hover, .show:hover,.live:hover, .book:hover,
+.goToCharge:hover, .goToPurchase:hover{
+    -fx-effect: dropshadow(three-pass-box, #757575, 10.0,0, 0, 0);
+}
+
+.personalInfo:pressed, .membership:pressed, .logout:pressed,
+.mission:pressed, .show:pressed,.live:pressed, .book:pressed,
+.goToCharge:pressed, .goToPurchase:pressed{
+    -fx-background-color: #13c6e4;
+}

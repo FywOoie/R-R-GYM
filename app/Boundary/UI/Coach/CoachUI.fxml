@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Coach.CoachMainUIController">
+    <children>
+        <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #F4511e;">
+            <children>
+                <ImageView fitHeight="105.0" fitWidth="266.0" layoutX="467.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="file:resource/image/coach.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+        <Label fx:id="coachName" alignment="CENTER" layoutX="932.0" layoutY="14.0" prefHeight="30.0" prefWidth="118.0" text="Coach Name" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="1070.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickLogOut" prefHeight="30.0" style="-fx-background-color: #F4511e; -fx-border-color: white;" styleClass="tab" stylesheets="@../CSS/button.css" text="Log out" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <ChoiceBox fx:id="choice1" layoutX="786.0" layoutY="349.0" prefHeight="23.0" prefWidth="162.0" styleClass="choose" stylesheets="@../CSS/choiceBox.css">
+            <tooltip>
+                <Tooltip text="Select the student" />
+            </tooltip>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></ChoiceBox>
+        <Button layoutX="1023.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#LiveButtonClick" prefHeight="30.0" prefWidth="94.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Confirm" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <Button layoutX="786.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#VideoButtonClick" styleClass="tab" stylesheets="@../CSS/button.css" text="setVideos" textFill="#fcf9f9">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        <TableView fx:id="Table1" layoutX="86.0" layoutY="280.0" prefHeight="322.0" prefWidth="489.0" stylesheets="@../CSS/table.css">
+            <columns>
+                <TableColumn fx:id="StuCol" prefWidth="130.39999389648438" text="Student Name" />
+                <TableColumn fx:id="TitleCol" prefWidth="99.19996643066406" text="Live Title" />
+                <TableColumn fx:id="WeekCol" prefWidth="77.5999755859375" text="Week" />
+                <TableColumn fx:id="TimeCol" prefWidth="183.199951171875" text="Scheduled Start Time" />
+            </columns>
+        </TableView>
+        <Label fx:id="Tip" layoutX="688.0" layoutY="530.0" />
+        <ImageView fitHeight="231.0" fitWidth="502.0" layoutX="616.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="file:resource/image/StartLive.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="25.0" fitWidth="171.0" layoutX="616.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="file:resource/image/setAVideo.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="25.0" fitWidth="188.0" layoutX="86.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="file:resource/image/liveShedule.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

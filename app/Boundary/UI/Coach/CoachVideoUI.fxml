@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Coach.CoachVideoUIController">
+   <children>
+      <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;">
+         <children>
+            <ImageView fitHeight="133.0" fitWidth="634.0" layoutX="283.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/setvideo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ChoiceBox fx:id="choice1" layoutX="508.0" layoutY="325.0" prefHeight="30.0" prefWidth="170.0" styleClass="choose" stylesheets="@../CSS/choiceBox.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <ChoiceBox fx:id="choice2" layoutX="728.0" layoutY="324.0" prefHeight="30.0" prefWidth="170.0" styleClass="choose" stylesheets="@../CSS/choiceBox.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ChoiceBox>
+      <Button layoutX="957.0" layoutY="325.0" mnemonicParsing="false" onAction="#SaveVideoClick" styleClass="tab" stylesheets="@../CSS/button.css" text="Confirm" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="Tip" layoutX="508.0" layoutY="410.0" prefHeight="38.0" prefWidth="534.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="32.0" onMouseClicked="#backLabelClick" style="-fx-background-color: #f4511e;" styleClass="tab" stylesheets="@../CSS/button.css" text="&lt;&lt;BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <TableView fx:id="VideoTable" layoutX="161.0" layoutY="241.0" prefHeight="300.0" prefWidth="300.0" stylesheets="@../CSS/table.css">
+        <columns>
+          <TableColumn fx:id="StuCol" prefWidth="150.0" text="Student Name" />
+          <TableColumn fx:id="VidCol" prefWidth="150.0" text="Video Name" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="24.0" fitWidth="185.0" layoutX="508.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:resource/image/studentName.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="150.0" layoutX="728.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:resource/image/videoName.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

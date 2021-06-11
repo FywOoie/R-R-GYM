@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Control.Customer.CustomerMainControl">
+    <children>
+        <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #F4511e;">
+            <children>
+                <Button alignment="CENTER" layoutX="1077.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#memberClick" prefHeight="40.0" prefWidth="40.0" styleClass="membership" stylesheets="@../CSS/button.css" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button alignment="CENTER" layoutX="1008.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#infoClick" prefHeight="40.0" prefWidth="40.0" styleClass="personalInfo" stylesheets="@../CSS/button.css" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button layoutX="1146.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#feedBack" prefHeight="40.0" prefWidth="40.0" styleClass="feedback" stylesheets="@../CSS/button.css" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <ImageView fitHeight="55.0" fitWidth="606.0" layoutX="297.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/welcome.png" />
+               </image>
+            </ImageView>
+              <Button fx:id="logoutButton" layoutX="1146.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#userLogOut" prefHeight="40.0" prefWidth="40.0" styleClass="logout" stylesheets="@../CSS/button.css" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="15.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+            </Button>
+            <Label fx:id="userIconLabel" layoutX="1013.0" layoutY="53.0" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font></Label>
+            <Label layoutX="1085.0" layoutY="53.0" text="VIP" textFill="WHITE">
+               <font>
+                  <Font name="Century" size="13.0" />
+               </font></Label>
+            <Label layoutX="1135.0" layoutY="54.0" text="Feedback" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font></Label>
+            <Label layoutX="1139.0" layoutY="123.0" text="LOG OUT" textFill="WHITE">
+               <font>
+                  <Font name="Centaur" size="13.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <ScrollPane fx:id="scrollPane" layoutX="60.0" layoutY="300.0" prefHeight="150.0" prefWidth="1080.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1558.0" style="-fx-background-color: white;">
+                    <children>
+                        <Pane layoutX="65.0" layoutY="32.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel1" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage1" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="237.0" layoutY="32.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel2" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage2" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="389.0" layoutY="32.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel3" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage3" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="555.0" layoutY="32.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel4" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage4" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="775.0" layoutY="29.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel5" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage5" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="936.0" layoutY="32.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel6" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage6" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="1137.0" layoutY="29.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel7" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage7" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="1272.0" layoutY="29.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel8" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage8" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="1387.0" layoutY="29.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="fitLabel9" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="fitImage9" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button fx:id="left" layoutX="14.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#scrollToLeft" prefHeight="150.0" prefWidth="50.0" text="&lt;" />
+        <Button fx:id="right" layoutX="1140.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#scrollToRight" prefHeight="150.0" prefWidth="50.0" text="&gt;" />
+        <Label fx:id="fitCatLabel" layoutX="28.0" layoutY="255.0" text="FITNESS" textFill="#e5521e">
+            <font>
+                <Font name="Gill Sans MT" size="35.0" />
+            </font>
+        </Label>
+        <Label fx:id="yogaCatLabel" layoutX="28.0" layoutY="453.0" text="YOGA" textFill="#e5521e">
+            <font>
+                <Font name="Gill Sans MT" size="35.0" />
+            </font>
+        </Label>
+        <Button fx:id="left1" layoutX="14.0" layoutY="498.0" mnemonicParsing="false" onMouseClicked="#scrollToLeft1" prefHeight="150.0" prefWidth="50.0" text="&lt;" />
+        <Button fx:id="right1" layoutX="1135.0" layoutY="498.0" mnemonicParsing="false" onMouseClicked="#scrollToRight1" prefHeight="150.0" prefWidth="50.0" text="&gt;" />
+        <ScrollPane fx:id="scrollPane1" layoutX="60.0" layoutY="498.0" prefHeight="150.0" prefWidth="1080.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="137.0" prefWidth="1558.0" style="-fx-background-color: white;">
+                    <children>
+                        <Pane layoutX="65.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel1" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage1" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="209.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel2" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage2" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="359.0" layoutY="34.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel3" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage3" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="511.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel4" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage4" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="651.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel5" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage5" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="816.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel6" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage6" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="993.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel7" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage7" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="1194.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel8" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage8" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                        <Pane layoutX="1343.0" layoutY="36.0" prefHeight="113.0" prefWidth="106.0">
+                            <children>
+                                <Label fx:id="yogaLabel9" layoutX="8.0" layoutY="80.0" prefHeight="15.0" prefWidth="90.0">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="yogaImage9" fitHeight="80.0" fitWidth="100.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Label fx:id="freePrompt" layoutX="200.0" layoutY="259.0" text="Free Now!" textFill="#f21f1f">
+         <font>
+            <Font name="Garamond" size="28.0" />
+         </font></Label>
+        <Label fx:id="chargePrompt" layoutX="283.0" layoutY="474.0" text="You will need to charge for membership to have more functionalities" textFill="#f21f1f">
+         <font>
+            <Font name="Marlett" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="168.0" prefHeight="69.0" prefWidth="320.0" text="Work Out Videos" textFill="#e5521e">
+         <font>
+            <Font name="Harlow Solid Italic" size="41.0" />
+         </font>
+      </Label>
+        <Pane fx:id="livePane" layoutX="792.0" layoutY="149.0" prefHeight="139.0" prefWidth="398.0" style="-fx-border-color: black; -fx-border-radius: 10px;">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../CSS/assets/coach.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="55.0" layoutY="3.0" text="Personal Coach" textFill="#e5521e">
+               <font>
+                  <Font name="FangSong" size="22.0" />
+               </font>
+            </Label>
+              <Button fx:id="bookLiveButton" layoutX="55.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#bookLive" prefHeight="60.0" prefWidth="60.0" styleClass="book" stylesheets="@../CSS/button.css" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+              <Button fx:id="customerVideoButton" layoutX="179.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#stuVideo" prefHeight="60.0" prefWidth="60.0" styleClass="mission" stylesheets="@../CSS/button.css" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="customerVideoButton1" layoutX="301.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#liveClick" prefHeight="60.0" prefWidth="60.0" styleClass="live" stylesheets="@../CSS/button.css" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+                <Label layoutX="162.0" layoutY="100.0" text="Assigned Video">
+                    <font>
+                        <Font name="Bodoni MT Bold" size="15.0" />
+                    </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="100.0" text="Book Live">
+               <font>
+                  <Font name="Bodoni MT Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="290.0" layoutY="100.0" text="Live Seesions">
+               <font>
+                  <Font name="Bodoni MT Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="noCoach" layoutX="242.0" layoutY="3.0" prefHeight="23.0" prefWidth="145.0" textFill="#e32020">
+               <font>
+                  <Font name="FangSong" size="13.0" />
+               </font>
+            </Label>
+         </children>
+        </Pane>
+    </children>
+</AnchorPane>

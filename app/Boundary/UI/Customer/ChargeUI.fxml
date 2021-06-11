@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Customer.CustomerChargeUIController">
+   <children>
+      <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;">
+         <children>
+            <Label layoutX="525.0" layoutY="45.0" text="Charge" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="50.0" layoutY="32.0" onMouseClicked="#backLabelClick" style="-fx-background-color: #f4511e;" styleClass="tab" stylesheets="@../CSS/button.css" text="&lt;&lt;BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button fx:id="enter" layoutX="552.0" layoutY="531.0" mnemonicParsing="false" onMouseClicked="#charge" prefHeight="82.0" prefWidth="96.0" styleClass="goToCharge" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="331.0" layoutY="448.0" text="Enter amount of money that you want to charge">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amount" layoutX="362.0" layoutY="536.0" prefHeight="61.0" prefWidth="140.0">
+         <font>
+            <Font size="36.0" />
+         </font></TextField>
+      <Pane fx:id="thirty" layoutX="180.0" layoutY="210.0" onMouseClicked="#getThirty" prefHeight="150.0" prefWidth="200.0" styleClass="charge" stylesheets="@../CSS/button.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/30.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="61.0" layoutY="51.0" text="\$30" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="48.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="fifty" layoutX="500.0" layoutY="210.0" onMouseClicked="#getFifty" prefHeight="150.0" prefWidth="200.0" styleClass="charge" stylesheets="@../CSS/button.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/50.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="61.0" layoutY="51.0" text="\$50" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="48.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="onehundred" layoutX="820.0" layoutY="210.0" onMouseClicked="#getOneHundred" prefHeight="150.0" prefWidth="200.0" styleClass="charge" stylesheets="@../CSS/button.css">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:resource/image/100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="48.0" layoutY="51.0" text="\$100" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Marlett" size="48.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Label fx:id="chargePro" layoutX="691.0" layoutY="552.0" prefHeight="39.0" prefWidth="365.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

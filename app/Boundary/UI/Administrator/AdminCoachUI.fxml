@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Administrator.AdminCoachUIController">
+    <children>
+        <AnchorPane fx:id="CoachListController" prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;">
+            <children>
+                <Label layoutX="66.0" layoutY="33.0" text="Coach" textFill="WHITE">
+                    <font>
+                        <Font name="Gabriola" size="65.0" />
+                    </font>
+                </Label>
+              <Button layoutX="300.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToVideoList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Video" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+            </Button>
+              <Button layoutX="450.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToBillList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="  Bill  " textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+            </Button>
+            <Button layoutX="600.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToCustomer" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+        </AnchorPane>
+      <Label layoutX="95.0" layoutY="176.0" text="Name">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coachSearchInput" layoutX="190.0" layoutY="173.0" prefHeight="48.0" prefWidth="150.0" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css">
+         <font>
+            <Font name="Arial" size="29.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="coachTable" layoutX="72.0" layoutY="254.0" prefHeight="355.0" prefWidth="601.0" stylesheets="@../CSS/table.css">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="217.0" text="Coach Name" />
+          <TableColumn fx:id="uidCol" prefWidth="123.0" text="UID" />
+            <TableColumn fx:id="pwdCol" prefWidth="260.0" text="Password" />
+        </columns>
+      </TableView>
+      <Label fx:id="wrongSearchLabel" layoutX="485.0" layoutY="187.0" prefHeight="20.0" prefWidth="230.0" textFill="RED" />
+      <Button fx:id="showCoach" alignment="CENTER" layoutX="360.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#coachShow" prefHeight="60.0" prefWidth="60.0" styleClass="search" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="1136.0" layoutY="107.0" text="LOG OUT" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="adminName" layoutX="1076.0" layoutY="22.0" prefHeight="30.0" prefWidth="120.0" text="Admin Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="1144.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#adminLogOut" prefHeight="40.0" prefWidth="40.0" styleClass="logout" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutX="685.0" layoutY="156.0" prefHeight="248.0" prefWidth="493.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <Text fill="#13c6e4" layoutX="157.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Coach">
+               <font>
+                  <Font name="System Italic" size="34.0" />
+               </font>
+            </Text>
+            <Text layoutX="49.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coach Name">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="coachNameInput" layoutX="189.0" layoutY="75.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. coachName" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Text layoutX="64.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="coachPwdInput" layoutX="189.0" layoutY="135.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. password" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Label fx:id="coachAddLabel" layoutX="116.0" layoutY="189.0" prefHeight="32.0" prefWidth="371.0" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="addCoachButton" layoutX="388.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#addCoach" prefHeight="73.0" prefWidth="73.0" styleClass="add" stylesheets="@../CSS/button.css" textFill="#13c6e4">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="689.0" layoutY="423.0" prefHeight="224.0" prefWidth="486.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <Text fill="#13c6e4" layoutX="135.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Coach">
+               <font>
+                  <Font name="System Italic" size="34.0" />
+               </font>
+            </Text>
+            <Text layoutX="66.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coach UID">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="deleteCoachID" layoutX="180.0" layoutY="101.0" prefHeight="39.0" prefWidth="179.0" promptText="e.g. 3" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Button fx:id="deleteCoachButton" layoutX="378.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#deleteCoach" prefHeight="73.0" prefWidth="72.0" styleClass="delete" stylesheets="@../CSS/button.css" textFill="#f4511e">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Label fx:id="coachDeleteLabel" layoutX="98.0" layoutY="160.0" prefHeight="32.0" prefWidth="371.0" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

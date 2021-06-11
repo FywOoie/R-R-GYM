@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#registerEnter" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Control.Customer.CustomerRegisterControl">
+   <children>
+           <AnchorPane prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                   <Label layoutX="396.0" layoutY="251.0" text="User name:">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </Label>
+                   <Label layoutX="96.0" layoutY="142.0" />
+                   <Label layoutX="404.0" layoutY="351.0" text="Password:">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </Label>
+                   <Label layoutX="358.0" layoutY="451.0" text="Confirm Password:">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </Label>
+                   <TextField fx:id="registerID" layoutX="550.0" layoutY="245.0">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </TextField>
+                   <TextField fx:id="password" layoutX="550.0" layoutY="345.0">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </TextField>
+                   <TextField fx:id="passwordConfirm" layoutX="550.0" layoutY="445.0">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+            </TextField>
+                   <Button fx:id="ok" layoutX="758.0" layoutY="542.0" mnemonicParsing="false" onMouseClicked="#registerAccount" styleClass="tab" stylesheets="@../CSS/button.css" text="OK" textFill="WHITE">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                       <cursor>
+                           <Cursor fx:constant="HAND" />
+                       </cursor>
+            </Button>
+                   <Button fx:id="returnButton" layoutX="568.0" layoutY="542.0" mnemonicParsing="false" onMouseClicked="#returnToLogin" styleClass="tab" stylesheets="@../CSS/button.css" text="Return" textFill="WHITE">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                       <cursor>
+                           <Cursor fx:constant="HAND" />
+                       </cursor>
+            </Button>
+            <Label fx:id="wrongPwdLabel" layoutX="551.0" layoutY="498.0" prefHeight="27.0" prefWidth="362.0" textFill="RED" />
+               </children>
+           </AnchorPane>
+           <AnchorPane prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #F4511e;" BorderPane.alignment="CENTER">
+               <children>
+                   <Label layoutX="385.0" layoutY="53.0" text="SIGN UP FOR GYM AT HOME!" textFill="WHITE">
+                       <font>
+                           <Font size="30.0" />
+                       </font>
+                   </Label>
+               </children>
+           </AnchorPane>
+   </children>
+</AnchorPane>

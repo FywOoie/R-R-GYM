@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Administrator.AdminVideoUIController">
+    <children>
+        <Label layoutX="62.0" layoutY="48.0" text="Coaches List " textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button layoutX="233.0" layoutY="44.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="+" textFill="#5060f4">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <AnchorPane fx:id="CoachListController" prefHeight="145.0" prefWidth="1208.0" style="-fx-background-color: #f4511e;">
+            <children>
+                <Label layoutX="66.0" layoutY="33.0" text="Video " textFill="WHITE">
+                    <font>
+                        <Font name="Gabriola" size="65.0" />
+                    </font>
+                </Label>
+              <Button layoutX="300.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToCoachList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Coach" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+              <Button layoutX="450.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToBillList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="  Bill  " textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="600.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToCustomer" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            </children>
+        </AnchorPane>
+      <TextField fx:id="videoSearchInput" layoutX="190.0" layoutY="173.0" prefHeight="48.0" prefWidth="150.0" styleClass="number" stylesheets="@../CSS/inputnumber.css">
+         <font>
+            <Font name="Arial" size="29.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="videoTable" layoutX="14.0" layoutY="236.0" prefHeight="406.0" prefWidth="821.0" stylesheets="@../CSS/table.css">
+         <columns>
+            <TableColumn fx:id="nameCol" prefWidth="125.0" text="Name" />
+            <TableColumn fx:id="uidCol" prefWidth="62.0" text="UID" />
+            <TableColumn fx:id="dateCol" prefWidth="146.0" text="Date" />
+            <TableColumn fx:id="categoryCol" prefWidth="83.0" text="Category" />
+            <TableColumn fx:id="urlCol" minWidth="3.0" prefWidth="166.0" text="URL" />
+            <TableColumn fx:id="coverCol" prefWidth="173.0" text="Cover" />
+            <TableColumn fx:id="likeCol" prefWidth="65.0" text="Like" />
+         </columns>
+      </TableView>
+      <Label fx:id="wrongSearchLabel" layoutX="512.0" layoutY="180.0" prefHeight="32.0" prefWidth="217.0" textFill="RED" />
+      <ChoiceBox fx:id="chooseSearch" layoutX="25.0" layoutY="177.0" prefHeight="40.0" prefWidth="141.0" styleClass="choose" stylesheets="@../CSS/choiceBox.css" />
+      <Text layoutX="964.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="showVideo" alignment="CENTER" layoutX="360.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#videoShow" prefHeight="60.0" prefWidth="60.0" styleClass="search" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="1136.0" layoutY="107.0" text="LOG OUT" textFill="WHITE">
+         <font>
+            <Font name="Centaur" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="adminName" layoutX="1076.0" layoutY="22.0" prefHeight="30.0" prefWidth="120.0" text="Admin Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="1144.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#adminLogOut" prefHeight="40.0" prefWidth="40.0" styleClass="logout" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutX="850.0" layoutY="514.0" prefHeight="145.0" prefWidth="348.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <TextField fx:id="deleteID" layoutX="100.0" layoutY="53.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. 1" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Text layoutX="41.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UID">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Label fx:id="videoDeleteLabel" layoutX="66.0" layoutY="99.0" prefHeight="32.0" prefWidth="217.0" textFill="RED" />
+            <Text fill="#13c6e4" layoutX="69.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Video">
+               <font>
+                  <Font name="System Italic" size="34.0" />
+               </font>
+            </Text>
+            <Button fx:id="deleteVideoButton" alignment="CENTER" layoutX="287.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#deleteVideo" prefHeight="50.0" prefWidth="50.0" styleClass="delete" stylesheets="@../CSS/button.css" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="850.0" layoutY="147.0" prefHeight="360.0" prefWidth="348.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <Text layoutX="44.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cover">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="coverInput" layoutX="101.0" layoutY="279.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. video.png" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Label fx:id="videoAddLabel" layoutX="66.0" layoutY="322.0" prefHeight="24.0" prefWidth="217.0" textFill="RED" />
+            <Label layoutX="29.0" layoutY="260.0" text="Cover in src\app\app.resource\video\cover">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="videoIDInput" layoutX="103.0" layoutY="64.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. yoga video" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Text layoutX="45.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="21.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="categoryInput" layoutX="106.0" layoutY="138.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. yoga" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Text layoutX="58.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Url">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <TextField fx:id="urlInput" layoutX="99.0" layoutY="206.0" prefHeight="40.0" prefWidth="179.0" promptText="e.g. video.mp4" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Label fx:id="categoryLabel" layoutX="131.0" layoutY="114.0" prefHeight="24.0" prefWidth="196.0" text="Category : no category now!">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="187.0" text="Video in src\app\app.resource\video\url">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Text fill="#13c6e4" layoutX="73.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Video">
+               <font>
+                  <Font name="System Italic" size="34.0" />
+               </font>
+            </Text>
+            <Button fx:id="addVideoButton" alignment="CENTER" layoutX="284.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#addVideo" prefHeight="50.0" prefWidth="50.0" styleClass="add" stylesheets="@../CSS/button.css" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

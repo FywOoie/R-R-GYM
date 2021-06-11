@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Boundary.UIController.Administrator.AdminBillUIController">
+    <children>
+        <Label layoutX="62.0" layoutY="48.0" text="Coaches List " textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button layoutX="233.0" layoutY="44.0" mnemonicParsing="false" style="-fx-background-color: #ff7043;     -fx-background-image: url(../../resource/image/search.png);     -fx-background-repeat: no-repeat;     -fx-background-size: contain;     -fx-background-position: center center;" text="+" textFill="#5060f4">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <AnchorPane fx:id="CoachListController" prefHeight="145.0" prefWidth="1200.0" style="-fx-background-color: #f4511e;">
+            <children>
+                <Label layoutX="66.0" layoutY="33.0" prefHeight="80.0" prefWidth="85.0" text="Bill" textFill="WHITE">
+                    <font>
+                        <Font name="Gabriola" size="65.0" />
+                    </font>
+                </Label>
+                <Button layoutX="1144.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#adminLogOut" prefHeight="40.0" prefWidth="40.0" styleClass="logout" stylesheets="@../CSS/button.css" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Label fx:id="adminName" layoutX="1076.0" layoutY="22.0" prefHeight="30.0" prefWidth="120.0" text="Admin Name" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+              <Button layoutX="300.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToVideoList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Video" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+              <Button layoutX="450.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToCoachList" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Coach" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="24.0" />
+                  </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="600.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#changeToCustomer" prefHeight="50.0" prefWidth="106.0" styleClass="tab" stylesheets="@../CSS/button.css" text="User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="1136.0" layoutY="107.0" text="LOG OUT" textFill="WHITE">
+               <font>
+                  <Font name="Centaur" size="13.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+      <Label layoutX="224.0" layoutY="181.0" />
+      <TextField fx:id="billSearchInput" layoutX="190.0" layoutY="173.0" prefHeight="48.0" prefWidth="150.0" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css">
+         <font>
+            <Font name="Arial" size="29.0" />
+         </font>
+      </TextField>
+      <Label layoutX="95.0" layoutY="175.0" text="Bill ID">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="billTable" editable="true" layoutX="62.0" layoutY="244.0" prefHeight="381.0" prefWidth="481.0" stylesheets="@../CSS/table.css">
+        <columns>
+          <TableColumn fx:id="billID" prefWidth="75.0" text="User UID" />
+          <TableColumn fx:id="money" prefWidth="120.0" text="Money" />
+            <TableColumn fx:id="time" prefWidth="285.0" text="Time" />
+        </columns>
+      </TableView>
+      <Label fx:id="wrongSearchLabel" layoutX="437.0" layoutY="181.0" prefHeight="32.0" prefWidth="230.0" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button fx:id="showBill" alignment="CENTER" layoutX="360.0" layoutY="167.0" mnemonicParsing="false" onMouseClicked="#clickBillShow" prefHeight="60.0" prefWidth="60.0" styleClass="search" stylesheets="@../CSS/button.css" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Pane layoutX="713.0" layoutY="181.0" prefHeight="224.0" prefWidth="397.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+         <children>
+            <Label layoutX="40.0" layoutY="3.0" text="Promotion Set Up" textFill="#13c6e4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="basisDiscount" layoutX="132.0" layoutY="63.0" prefHeight="36.0" prefWidth="67.0" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <TextField fx:id="premierDiscount" layoutX="132.0" layoutY="112.0" prefHeight="36.0" prefWidth="67.0" styleClass="inputInfo" stylesheets="@../CSS/inputnumber.css" />
+            <Text layoutX="40.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Premier">
+               <font>
+                  <Font size="22.0" />
+               </font></Text>
+            <Text layoutX="68.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic">
+               <font>
+                  <Font size="22.0" />
+               </font></Text>
+            <Button fx:id="confirm" layoutX="115.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#changeDiscount" prefHeight="36.0" prefWidth="141.0" styleClass="tab" stylesheets="@../CSS/button.css" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font></Button>
+            <Label layoutX="206.0" layoutY="67.0" text="\%">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="206.0" layoutY="116.0" text="\%">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="promoLabel" layoutX="240.0" layoutY="98.0" prefHeight="28.0" prefWidth="150.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

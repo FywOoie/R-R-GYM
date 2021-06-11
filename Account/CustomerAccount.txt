@@ -1,0 +1,3 @@
+{"id":"test","uid":1,"pwd":"test1234","balance":150.0,"membership":2,"favoList":[],"position":"Back"}
+{"id":"customerTest","uid":2,"pwd":"customer123","balance":0.0,"membership":0,"favoList":[],"position":""}
+{"id":"xiaoming","uid":3,"pwd":"xm123","balance":0.0,"membership":0,"favoList":[],"position":""}

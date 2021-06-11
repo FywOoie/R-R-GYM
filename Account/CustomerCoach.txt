@@ -1,0 +1,2 @@
+{"stuID":"zcc","coachID":"lyb1","position":"Chest"}
+{"stuID":"test","coachID":"lyb2","position":"Back"}
